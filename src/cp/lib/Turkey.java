@@ -4,6 +4,7 @@
  */
 package cp.lib;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JApplet;
 
@@ -14,15 +15,14 @@ import javax.swing.JApplet;
 public class Turkey extends JApplet {
 
     /**
-     * Initialization method that will be called after the applet is loaded into
+     * Painting method that will be called after the applet is loaded into
      * the browser.
+     * @param page
      */
-    public void init() {
-        // TODO start asynchronous download of heavy resources
-    }
     
+    @Override
     public void paint(Graphics page)
     {
-        
+        this.setBackground(Color.red);
     }
 }

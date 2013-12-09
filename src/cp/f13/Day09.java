@@ -4,6 +4,8 @@
  */
 package cp.f13;
 
+import cp.lib.Weather;
+
 /**
  *
  * @author sbroad

@@ -42,10 +42,8 @@ import java.awt.Graphics;
  * <li>Now visit http://sites.saintmarys.edu/~<username>/Lab08.html</li>
  * 
  * <li>If the Turkey or Bunny doesn’t show up completely, open notepad and edit 
- * H:\WWW\Lab08.html.  About two thirds of the way down, you’ll see <code>
- * <APPLET codebase="classes" code="lab8/Turkey.class" width=350 height=200>
- * </APPLET></code>. Just change the width and height until you can see the 
- * whole turkey!</li>
+ * H:\WWW\Lab08.html.  About two thirds of the way down, you’ll see &lt;applet&gt;. 
+ * Just change the width and height until you can see the whole turkey!</li>
  * 
  * <li>Submit your project. Email the instructor a link to your Turkey or Bunny</li></ol>
  * 
@@ -53,6 +51,11 @@ import java.awt.Graphics;
  */
 public class Lab08 {
     
+    /**
+     * This method is an override for the <code>paint</code> method in the JApplet
+     * class. Implement this method to draw your turkey or bunny.
+     * @param page the graphics object for this applet
+     */
     public void paint(Graphics page) {
         
     }

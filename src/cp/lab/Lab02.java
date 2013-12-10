@@ -7,11 +7,11 @@
 package cp.lab;
 
 /**
- * CPSC 207: Computer Programming<br/>
- * Lab 2: User Input and our first web service<br/><br/>
+ * <p>Lab 2: User Input and our first web service</p>
+ * <p>CPSC 207: Computer Programming</p>
  * 
- * In this Lab you will use the WebServices.jar library to obtain city and state
- * information about a specific zip code.<br/><br/>
+ * <p>In this Lab you will use the WebServices.jar library to obtain city and state
+ * information about a specific zip code.</p>
  * 
  * <ol><li> To learn how the web service works, copy the following link into the URL 
  * box in your favorite web browser: http://zip.elevenbasetwo.com/v2/US/46556</li>

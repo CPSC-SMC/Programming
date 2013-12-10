@@ -7,15 +7,14 @@
 package cp.lab;
 
 /**
- * CPSC 207: Computer Programming<br/>
- * Lab 1: Getting to know NetBeans, Java and printing to the Java Console<br/>
- * <br/>
- * In this lab, you will become familiar with NetBeans, the Java console, and 
- * printing to the Java console. You will also learn how to send me your
- * assignments.<br/>
+ * <p>Lab 1: Getting to know NetBeans, Java and printing to the Java Console</p>
+ * <p>CPSC 207: Computer Programming</p>
  * 
- * <ol>
- * <li> Open NetBeans.</li>
+ * <p>In this lab, you will become familiar with NetBeans, the Java console, and 
+ * printing to the Java console. You will also learn how to send me your
+ * assignments.</p>
+ * 
+ * <ol><li> Open NetBeans.</li>
  * 
  * <li> Create a NetBeans project. (File>New Project...).<ol type="a">
  *      <li> Choose Java from the list on the left.</li>

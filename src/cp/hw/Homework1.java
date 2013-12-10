@@ -67,11 +67,11 @@ public class Homework1 {
     }
     
     /**
-     * Return a string that wishes someone a Happy _____ Birthday. For example,
+     * Return a string that wishes someone a Happy _____ Birthday!. For example,
      * Happy 19th Birthday. Don't worry about whether ending should be st, nd, rd,
-     * or th. So Happy 21th birthday is okay.
+     * or th. So Happy 21th Birthday! is okay.
      * @param age
-     * @return
+     * @return Happy __th Birthday!
      */
     public static String birthday(int age) {
         throw new HomeworkException();

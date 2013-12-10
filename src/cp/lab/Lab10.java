@@ -7,7 +7,7 @@
 package cp.lab;
 
 /**
- * <p>Lab 11: Mashup II Directions and Knowledge</p>
+ * <p>Lab 10: Mashup II Directions and Knowledge</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
  * <p>Make a GUI program that computes directions from an origin to a 

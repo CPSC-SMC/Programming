@@ -19,7 +19,8 @@ package cp.lab;
  * 2. Observe that simple, relevant information is displayed in the web browser, 
  * but not in an especially useful format.
  * 
- * 3. Create a Lab02 project in NetBeans. See Lab1 if you need a refresher.
+ * 3. Create a Lab02 project in NetBeans. See Lab1 if you need a refresher. 
+ * Replace the contents of the Lab02.java file with this file.
  * 
  * 4. Download the files WebServices.jar and json-simple-1.1.1.jar. Copy them to
  * the NetBeansProjects folder in your My Documents folder. Ask if you need help.
@@ -70,7 +71,7 @@ public class Lab02 {
      * @param args
      */
     public static void main(String [] args) {
-        
+        // TODO Don't forget to add plenty of comments
     }
     
 }

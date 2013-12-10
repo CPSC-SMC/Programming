@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package cp.f13;
+package cp.term.f13;
 
 import edu.saintmarys.google.Directions;
 import java.io.IOException;

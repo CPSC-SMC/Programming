@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package cp.f13;
+package cp.term.f13;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -6,7 +6,7 @@
 
 package cp.hw;
 
-import ds.HomeworkException;
+import cp.HomeworkException;
 
 /**
  * <p>CPSC 207: Computer Programming<br/>

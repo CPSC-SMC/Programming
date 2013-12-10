@@ -4,7 +4,7 @@
  */
 package cp.lib;
 
-import ds.HomeworkException;
+import cp.HomeworkException;
 import edu.saintmarys.rottentomatoes.Movie;
 
 /**

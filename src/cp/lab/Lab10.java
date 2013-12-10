@@ -6,6 +6,18 @@
 
 package cp.lab;
 
+import edu.saintmarys.google.Directions;
+import edu.saintmarys.google.Geocoding;
+import edu.saintmarys.google.Geocoding.Location;
+import edu.saintmarys.wolfram.Pod;
+import edu.saintmarys.wolfram.WolframAlpha;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.parsers.ParserConfigurationException;
+import org.xml.sax.SAXException;
+
 /**
  * <p>Lab 10: Mashup II Directions and Knowledge</p>
  * <p>CPSC 207: Computer Programming</p>
@@ -34,7 +46,8 @@ package cp.lab;
  * <li>Create a Java Application project. Replace the text in the class file 
  * that it creates with the text in this file.</li>
  * 
- * <li>Add a JFrame form.</li>
+ * <li>Add a JFrame form. This is where you will do your work. This file is
+ * just for instructions and demonstration of WolframAlpha and Directions.</li>
  * 
  * <li>Layout your GUI.</li>
  * 
@@ -55,5 +68,50 @@ package cp.lab;
  * @author sbroad
  */
 public class Lab10 {
-    
+    public static void main(String [] args) {
+        try {
+            
+            // The locations... you might get this from JTextFields
+            String from = "The White House";
+            String to = "Saint Mary's College, Notre Dame, IN";
+            
+            // Geocode these locations
+            Geocoding orig = new Geocoding(from);
+            Geocoding dest = new Geocoding(to);
+            
+            // Get the Location data for each location
+            Location fromLoc = orig.getLocations().get(0);
+            Location toLoc = dest.getLocations().get(0);
+            
+            // Get directions
+            Directions dir = new Directions(fromLoc.toString(), toLoc.toString());
+            
+            // Display the directions
+            System.out.println("Directions");
+            System.out.println(dir.stepByStep());
+            System.out.println();
+            
+            // Query WolframAlpha
+            String query = "schools near " + toLoc.getCity() + " " 
+                                           + toLoc.getState() + " " 
+                                           + toLoc.getCountry();
+            System.out.println(query);
+            WolframAlpha wolf = new WolframAlpha(query);
+            
+            // It is possible to display individual pods, or all pods as shown
+            // below.
+            for (Pod p : wolf.getPods()) {
+                System.out.println(p.getHtmlBlurb());
+                System.out.println(p.getPlaintext());
+            }
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Lab10.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(Lab10.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(Lab10.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
 }

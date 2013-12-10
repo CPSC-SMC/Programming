@@ -1,4 +1,5 @@
 CPSC 207: Computer Programming
+
 Lab Activities
 
 This folder contains instructions for all of the lab activities that we will do

@@ -55,6 +55,11 @@ import java.util.logging.Logger;
  */
 public class Lab09 {
     
+    /**
+     * This method is an example of how you might begin to handle the JButton
+     * click event.
+     * @param evt the button click evt
+     */
     public void OKButtonActionPerformed(ActionEvent evt) {
         try {
             String location = "The White House"; // you'd get this from a GUI component

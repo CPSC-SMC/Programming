@@ -9,8 +9,8 @@ package cp.hw;
 import cp.HomeworkException;
 
 /**
- * <p>CPSC 207: Computer Programming<br/>
- * Homework 1: Variables, methods, expressions, data conversion</p>
+ * <p>Homework 1: Variables, methods, expressions, data conversion</p>
+ * <p>CPSC 207: Computer Programming</p>
  * 
  * <p>Complete each of the methods in Homework1 below. Each method describes what
  * it is supposed to do. Use the <code>return</code> statement to return the

@@ -10,8 +10,8 @@ import cp.HomeworkException;
 import java.util.Arrays;
 
 /**
- * <p>CPSC 207: Computer Programming<br/>
- * Homework 2: Strings, objects, methods, parameters </p>
+ * <p>Homework 2: Strings, objects, methods, parameters </p>
+ * <p>CPSC 207: Computer Programming</p>
  * 
  * <p>Complete each of the methods in Homework2 below. Each method describes what
  * it is supposed to do. Use the <code>return</code> statement to return the

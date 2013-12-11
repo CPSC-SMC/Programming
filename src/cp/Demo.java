@@ -9,15 +9,24 @@ package cp;
 import edu.saintmarys.rottentomatoes.Movie;
 import edu.saintmarys.rottentomatoes.MovieListRequest;
 import edu.saintmarys.rottentomatoes.MovieSearchRequest;
+import edu.saintmarys.rottentomatoes.Review;
+import edu.saintmarys.rottentomatoes.ReviewRequest;
 import java.awt.Image;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
+import twitter4j.Query;
+import twitter4j.QueryResult;
+import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
 
 /**
  *
@@ -52,13 +61,18 @@ public class Demo extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TweetsArea = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        ReviewsArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         MovieSearchLabel.setText("Movie:");
 
         MovieField.setToolTipText("");
+        MovieField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OKButtonActionPerformed(evt);
+            }
+        });
 
         OKButton.setText("OK");
         OKButton.addActionListener(new java.awt.event.ActionListener() {
@@ -92,11 +106,13 @@ public class Demo extends javax.swing.JFrame {
 
         MovieTabs.addTab("Tweets", jScrollPane1);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane3.setViewportView(jTextArea1);
+        ReviewsArea.setColumns(20);
+        ReviewsArea.setLineWrap(true);
+        ReviewsArea.setRows(5);
+        ReviewsArea.setWrapStyleWord(true);
+        jScrollPane3.setViewportView(ReviewsArea);
 
-        MovieTabs.addTab("More Info", jScrollPane3);
+        MovieTabs.addTab("Reviews", jScrollPane3);
 
         jSplitPane1.setRightComponent(MovieTabs);
 
@@ -153,22 +169,85 @@ public class Demo extends javax.swing.JFrame {
     }//GEN-LAST:event_OKButtonActionPerformed
 
     private void MoviesListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_MoviesListValueChanged
+
+        // Obtain the movie object
+        Movie mov;
+        try { 
+            mov = (Movie) MoviesList.getSelectedValue(); 
+            System.out.println(mov.getApiQuery());
+        }
+        catch (Exception ex) { 
+            PosterLabel.setIcon(null);
+            PosterLabel.setText("Movie not found");
+            return;
+        }
         
         // Display the movie poster
         try {
-            // TODO add your handling code here:
-            Movie mov = (Movie) MoviesList.getSelectedValue();
+            // Load the movie poster
             URL url = new URL(mov.getPosterLink());
             ImageIcon img = new ImageIcon(url);
+            
+            // Rescale the movie poster
             int w = img.getIconWidth();
             int h = img.getIconHeight();
-            img.setImage(img.getImage().getScaledInstance(500*w/h, 500, Image.SCALE_SMOOTH));
+            int labelH = MovieTabs.getHeight() - 36;
+            img.setImage(img.getImage().getScaledInstance(labelH*w/h, labelH, Image.SCALE_SMOOTH));
+            
+            // Put the movie poster into the label, and change the text
             PosterLabel.setIcon(img);
             PosterLabel.setText("");
-        } catch (MalformedURLException ex) {
+        } catch (Exception ex) {
+            // If for some reason the poster isn't available, indicate this
             PosterLabel.setIcon(null);
             PosterLabel.setText("Poster could not be displayed");
         }
+        
+        // Display tweets about the movie
+        try {
+            // clear out the tweets
+            TweetsArea.setText("");
+            
+            // The factory instance is re-useable and thread safe.
+            Twitter twitter = TwitterFactory.getSingleton();
+            Query query = new Query(mov.getTitle());
+            QueryResult result = twitter.search(query);
+            String tweet;
+            for (Status status : result.getTweets()) {
+                tweet = String.format("[%s] @%s tweeted %s\n", 
+                        status.getCreatedAt(),
+                        status.getUser().getScreenName(),
+                        status.getText()
+                        );
+                TweetsArea.append(tweet);
+            }        
+        }
+        catch (TwitterException ex) {
+            TweetsArea.setText(ex.toString());
+        }
+        
+        
+        // Display reviews of the movie
+        try {
+            ReviewsArea.setText("");
+            for (Review rev : (new ReviewRequest(mov.getMovie())).getReviews()) {
+                String review = String.format("[%s] (by %s, %s)\n%s\n%s\n\n", 
+                        rev.getDateOfReview(),
+                        rev.getCritic(),
+                        rev.getPublication(),
+                        rev.getQuote(),
+                        rev.getReviewLinkUrl()
+                );
+                ReviewsArea.append(review);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Demo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ReviewRequest.ReviewRequestException ex) {
+            Logger.getLogger(Demo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(Demo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_MoviesListValueChanged
 
     /**
@@ -213,11 +292,11 @@ public class Demo extends javax.swing.JFrame {
     private javax.swing.JList MoviesList;
     private javax.swing.JButton OKButton;
     private javax.swing.JLabel PosterLabel;
+    private javax.swing.JTextArea ReviewsArea;
     private javax.swing.JTextArea TweetsArea;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

@@ -17,7 +17,7 @@ import cp.HomeworkException;
  * required information.</p>
  * 
  * <p>Create a project called Homework4. Copy this file over the contents of
- * Homework1.java. The main method does not need to be modified. Remove the lines
+ * Homework4.java. The main method does not need to be modified. Remove the lines
  * marked <code>throw new HomeworkException();</code>.</p>
  * 
  * <p>Submit your project in the usual way. See Lab01 for details.</p>
@@ -74,7 +74,14 @@ public class Homework4 {
      * and 1 energy.<ol>
      * <li>The lion will forage().</li> 
      * <li>After foraging, if the lion's energy is less than 0, the animal must 
-     * then sleep(). Otherwise the animal
+     * then sleep(). Otherwise the animal will eat() then sleep().</li>
+     * <li>The lion must forage() for water, then drink(), then sleep() if 
+     * energy less than 0.</li>
+     * <li>The lion must forage() for food, then eat(), then sleep() if energy 
+     * less than 0.</li>
+     * <li>Is the lion going to survive? Is the lion's hunger and thirst
+     * </ol>
+     * 
      * @return true if hunger and thirst are less than 4
      */
     public static boolean aliveAtTheEndOfTheDay() {
@@ -86,7 +93,48 @@ public class Homework4 {
      * @param args
      */
     public static void main(String [] args) {
-        System.out.printf("%d greater than 5 should be true: %s\n", 7, isBiggerThanFive(7));
+        
+        // Examine our test functions with several values of n
+        for (int n = 4; n < 10; n++) {
+            
+            if (isBiggerThanFive(n)) {
+                System.out.printf("%d is bigger than 5\n", n);
+            }
+            else {
+                System.out.printf("%d is NOT bigger than 5\n", n);
+            }
+        }
+        
+        // Try the bothTrueOrBothFalse method
+        System.out.println("true,true=" + bothTrueOrBothFalse(true, true));
+        System.out.println("true,false=" + bothTrueOrBothFalse(true, false));
+        System.out.println("false,true=" + bothTrueOrBothFalse(false, true));
+        System.out.println("false,false=" + bothTrueOrBothFalse(false, false));
+        
+        // Try the betweenEAndPi method
+        for (double x = 2.5; x < 3.5; x+=0.10) {
+            if (betweenPiAndE(x)) {
+                System.out.printf("%.2f is between e and pi\n", x);
+            }
+            else {
+                System.out.printf("%.2f is NOT between e and pi\n", x);
+            }
+        }
+        
+        // Try the goldilocks method
+        for (int temp = 90; temp < 130; temp += 5) {
+            System.out.println("Goldilocks thinks it's " + goldilocks(temp));
+        }
+        
+        // Try the aliveAtTheEndOfTheDay() method several times
+        for (int lion = 1; lion <= 10; lion++) {
+            if (aliveAtTheEndOfTheDay()) {
+                System.out.printf("Lion %d lived.\n", lion);
+            }
+            else {
+                System.out.printf("Lion %d died.\n", lion);
+            }
+        }
     }
     
 }

@@ -13,14 +13,6 @@ import javax.swing.JApplet;
  */
 public class Day20 extends JApplet {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-       (new Day20()).show();
-    }
-    
     @Override
     public void paint(Graphics page)
     {

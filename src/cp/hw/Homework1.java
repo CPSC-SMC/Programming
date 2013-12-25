@@ -6,7 +6,7 @@
 
 package cp.hw;
 
-import cp.HomeworkException;
+import ds.LabException;
 
 /**
  * <p>Homework 1: Variables, methods, expressions, data conversion</p>
@@ -43,7 +43,7 @@ public class Homework1 {
      * @return a/b, as a <code>double</code>
      */
     public static double divide(int a, int b) {
-        throw new HomeworkException();
+        throw new LabException();
     }
 
     /**
@@ -53,7 +53,7 @@ public class Homework1 {
      * @return the corresponding number of centimeters
      */
     public static double inchesToCentimeters(double inches) {
-        throw new HomeworkException();
+        throw new LabException();
     }
 
     /**
@@ -63,7 +63,7 @@ public class Homework1 {
      * @return a times b, as an integer
      */
     public static int multiply(byte a, byte b) {
-        throw new HomeworkException();
+        throw new LabException();
     }
     
     /**
@@ -74,7 +74,7 @@ public class Homework1 {
      * @return Happy __th Birthday!
      */
     public static String birthday(int age) {
-        throw new HomeworkException();
+        throw new LabException();
     }
     
     /**
@@ -83,7 +83,7 @@ public class Homework1 {
      * user responds with Elmo, it should print Hello, Elmo!
      */
     public static void promptRespondAcknowledge() {
-        
+        throw new LabException();
     }
     
     /**

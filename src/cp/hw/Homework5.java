@@ -6,6 +6,7 @@
 
 package cp.hw;
 
+import cp.lib.Animal;
 import java.util.Random;
 
 /**
@@ -110,10 +111,12 @@ public class Homework5 {
         //      c. Print the random student's gpa to 6 decimal places.
         
         // TODO Create 100 Animal objects. Use a while or for loop. For each of
-        // them, make the animal forage(), eat(), forage(), drink() and sleep().
-        // Count how many animals survive. The animal survives if thirst and
-        // hunger are less than 4.
-        
+        // them, make the animal forage(), then eat() the amount foraged, sleep(8).
+        // Then forage() again and drink() the amount foraged and sleep(8).
+        // Count how many animals survive. The animal survives if thirst is less
+        // than 2 and hunger is less than 4. Print a message to the console 
+        // indicating how many animals survived.
+
     }
     
 }

@@ -74,15 +74,15 @@ public class Homework4 {
      * and 1 energy.<ol>
      * <li>The lion will forage().</li> 
      * <li>After foraging, if the lion's energy is less than 0, the animal must 
-     * then sleep(). Otherwise the animal will eat() then sleep().</li>
-     * <li>The lion must forage() for water, then drink(), then sleep() if 
+     * then sleep(6). Otherwise the animal will eat(1) then sleep(8).</li>
+     * <li>The lion must forage() for water, then drink(1), then sleep(6) if 
      * energy less than 0.</li>
-     * <li>The lion must forage() for food, then eat(), then sleep() if energy 
+     * <li>The lion must forage() for food, then eat(1), then sleep(6) if energy 
      * less than 0.</li>
      * <li>Is the lion going to survive? Is the lion's hunger and thirst
      * </ol>
      * 
-     * @return true if hunger and thirst are less than 4
+     * @return true if hunger is less than 4 and thirst is less than 2
      */
     public static boolean aliveAtTheEndOfTheDay() {
         throw new HomeworkException();

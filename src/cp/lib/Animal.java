@@ -100,13 +100,15 @@ public class Animal {
      * It is hard to tell how long foraging will take. However, foraging is
      * necessary to find food and water. It increases hunger and thirst and 
      * decreases energy.
+     * @return the amount of food or water found
      */
-    public void forage() {
+    public int forage() {
         Random gen = new Random();
         double time = gen.nextDouble()*8;
         energy -= 0.5*time;
         hunger += 0.5*time;
-        thirst += 0.25*time;
+        thirst += 0.3*time;
+        return gen.nextInt(3);
     }
     
     /**
@@ -115,7 +117,7 @@ public class Animal {
      */
     @Override
     public String toString() {
-        return String.format("Name: %s Energy: %.2f Hunger: %d Thirst %d", 
+        return String.format("Name: %s, Energy: %.2f, Hunger: %d, Thirst %d", 
                 getName(), getEnergy(), getHunger(), getThirst());
     }
 }

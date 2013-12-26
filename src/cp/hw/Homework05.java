@@ -6,26 +6,25 @@
 
 package cp.hw;
 
-import cp.lib.Animal;
 import java.util.Random;
 
 /**
  * <p>Homework 5: Flow control continued: Loops, Switches</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
- * <p>Complete each of the methods in Homework5 below. Each method describes what
+ * <p>Complete each of the methods in Homework05 below. Each method describes what
  * it is supposed to do. Use the <code>return</code> statement to return the
  * required information.</p>
  * 
- * <p>Create a project called Homework5. Copy this file over the contents of
- * Homework5.java. The main method does not need to be modified. Remove the lines
+ * <p>Create a project called Homework05. Copy this file over the contents of
+ * Homework05.java. The main method does not need to be modified. Remove the lines
  * marked <code>throw new HomeworkException();</code>.</p>
  * 
  * <p>Submit your project in the usual way. See Lab01 for details.</p>
  * 
  * @author sbroad
  */
-public class Homework5 {
+public class Homework05 {
     
     /**
      * A list of majors. Feel free to add yours to the list if it is not already

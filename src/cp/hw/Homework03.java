@@ -12,19 +12,19 @@ import cp.HomeworkException;
  * <p>Homework 3: Classes, methods, instances, objects.</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
- * <p>Complete each of the methods in Homework3 below. Each method describes what
+ * <p>Complete each of the methods in Homework03 below. Each method describes what
  * it is supposed to do. Use the <code>return</code> statement to return the
  * required information.</p>
  * 
- * <p>Create a project called Homework3. Copy this file over the contents of
- * Homework3.java. The main method does not need to be modified. Most of your
+ * <p>Create a project called Homework03. Copy this file over the contents of
+ * Homework03.java. The main method does not need to be modified. Most of your
  * work will be done in the <code>class Student</code> declaration below.</p>
  * 
  * <p>Submit your project in the usual way. See Lab01 for details.</p>
  * 
  * @author sbroad
  */
-public class Homework3 {
+public class Homework03 {
     
     /**
      * A test program for Homework 3 exercises. Do not modify.

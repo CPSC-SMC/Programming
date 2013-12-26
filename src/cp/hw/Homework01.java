@@ -12,19 +12,19 @@ import ds.LabException;
  * <p>Homework 1: Variables, methods, expressions, data conversion</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
- * <p>Complete each of the methods in Homework1 below. Each method describes what
+ * <p>Complete each of the methods in Homework01 below. Each method describes what
  * it is supposed to do. Use the <code>return</code> statement to return the
  * required information.</p>
  * 
- * <p>Create a project called Homework1. Copy this file over the contents of
- * Homework1.java. The main method does not need to be modified. Remove the lines
+ * <p>Create a project called Homework01. Copy this file over the contents of
+ * Homework01.java. The main method does not need to be modified. Remove the lines
  * marked <code>throw new HomeworkException();</code>.</p>
  * 
  * <p>Submit your project in the usual way. See Lab01 for details.</p>
  * 
  * @author sbroad
  */
-public class Homework1 {
+public class Homework01 {
 
     /**
      * Here is an example. It adds two integers.

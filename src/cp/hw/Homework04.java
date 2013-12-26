@@ -12,19 +12,19 @@ import cp.HomeworkException;
  * <p>Homework 4: Boolean expressions, conditionals, flow control</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
- * <p>Complete each of the methods in Homework4 below. Each method describes what
+ * <p>Complete each of the methods in Homework04 below. Each method describes what
  * it is supposed to do. Use the <code>return</code> statement to return the
  * required information.</p>
  * 
- * <p>Create a project called Homework4. Copy this file over the contents of
- * Homework4.java. The main method does not need to be modified. Remove the lines
+ * <p>Create a project called Homework04. Copy this file over the contents of
+ * Homework04.java. The main method does not need to be modified. Remove the lines
  * marked <code>throw new HomeworkException();</code>.</p>
  * 
  * <p>Submit your project in the usual way. See Lab01 for details.</p>
  * 
  * @author sbroad
  */
-public class Homework4 {
+public class Homework04 {
     
     /**
      * Is the number <code>n</code> bigger than five?

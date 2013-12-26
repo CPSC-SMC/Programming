@@ -64,7 +64,7 @@ public class Homework5 {
 
         /**
          * Get the random student's GPA.
-         * @return
+         * @return the random student's gpa
          */
         public double getGpa() {
             return gpa;

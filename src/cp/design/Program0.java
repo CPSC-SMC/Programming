@@ -41,6 +41,12 @@ import java.util.Scanner;
  * <p><code>> java -jar Program1.jar </code></p>
  * in the command/terminal window.
  * 
+ * <h2>User Instructions</h2>
+ * The program will prompt the user to enter a number of pennies. The user should
+ * enter a whole number of pennies. The program will then produce a report
+ * indicating the number of dollars, quarters, dimes, nickels and remaining
+ * pennies into which the initial number of pennies can be exchanged.
+ * 
  * <h2>System Requirements</h2>
  * The system may be Windows XP or later, MacOS X 10.6 (Snow Leopard) or later 
  * or a recent Linux distribution. The Java 2 Standard Edition (J2SE) version 6 
@@ -79,7 +85,7 @@ public class Program0 {
         int pennies = scan.nextInt();
         
         // Reply to the user input
-        System.out.printf("%d pennies can be converted to", pennies);
+        System.out.printf("%d pennies can be converted to\n", pennies);
         
         // Convert the pennies to dollars
         System.out.printf("Dollars:  %d\n", pennies/100);

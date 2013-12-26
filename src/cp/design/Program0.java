@@ -54,7 +54,7 @@ import java.util.Scanner;
  * RAM.
  * 
  * <h2>Testing</h2>
- * See TESTS.md
+ * See TESTS.txt
  * 
  * @author Steven
  */

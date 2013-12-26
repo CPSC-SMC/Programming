@@ -6,12 +6,12 @@ import java.util.Scanner;
  * <h1>Program 0: Counting pennies</h1>
  * 
  * <h2>Program Description</h2>
- * <p>Many of us have large collections of pennies in various containers in our 
+ * Many of us have large collections of pennies in various containers in our 
  * homes.  If we could turn these into dollars, quarters, dimes, etc., the money 
  * would be more usable.  This program allows a user to enter (from the 
  * keyboard) the number of pennies in her favorite container.  It then computes 
  * and prints the number of dollars, quarters, dimes, nickels, and pennies that 
- * it should changed into that totals the same amount.</p>
+ * it should changed into that totals the same amount.
  * 
  * <h2>User Requirements</h2>
  * <ol type="A">
@@ -29,67 +29,27 @@ import java.util.Scanner;
  * </ol>
  * 
  * <h2>Design – Imports</h2>
- * <p>This program uses the java.util.Scanner class.</p>
+ * This program uses the java.util.Scanner class.
  * 
  * <h2>User Documentation</h2>
  * Open the command window in Windows or the terminal window in MacOS X/Linux. 
  * Navigate to the directory or folder where the compiled java program is stored 
  * using the cd command. (For example, 
- * <code>&gt; H:<br/>&gt; cd My Documents/Program1/dist<br/></code>
+ * <p><code>> H:<br/>> cd My Documents/Program1/dist</code></p>
  * 
-To run the program, the user should type 
-> java -jar Program1.jar 
-in the command/terminal window.
-System Requirements
-The system may be Windows XP or later, MacOS X 10.6 (Snow Leopard) or later or a recent Linux distribution. The Java 2 Standard Edition (J2SE) version 6 or later must be installed on the system, with a minimum of 1GHz CPU, 1GB of RAM.
-Testing
-Test 1
-Run the program.
-When prompted, enter 376.
-(A) The user is able to enter the number of pennies.   _____
-(B) The prompt was appropriate and clear.   _____
-Verify that the output is as follows:
-Dollars:  3
-Quarters: 3
-Dimes:    0
-Nickels:  0
-Pennies:  1
-(C) The program prints the appropriate number of each denomination. _____
-(D) The results must be printed one denomination per line. _____
-(E) The pennies should be converted into the largest denominations first with the remainder converted into smaller denominations. ______
-
-Test 2
-Run the program.
-When prompted, enter 99.
-(A) The user is able to enter the number of pennies.   _____
-(B) The prompt was appropriate and clear.   _____
-Verify that the output is as follows:
-Dollars:  0
-Quarters: 3
-Dimes:    2
-Nickels:  1
-Pennies:  4
-(C) The program prints the appropriate number of each denomination. _____
-(D) The results must be printed one denomination per line. _____
-(E) The pennies should be converted into the largest denominations first with the remainder converted into smaller denominations. ______
-
-Test 3
-Run the program.
-When prompted, enter 206.
-(A) The user is able to enter the number of pennies.   _____
-(B) The prompt was appropriate and clear.   _____
-Verify that the output is as follows:
-Dollars:  2
-Quarters: 0
-Dimes:    0
-Nickels:  1
-Pennies:  1
-(C) The program prints the appropriate number of each denomination. _____
-(D) The results must be printed one denomination per line. _____
-(E) The pennies should be converted into the largest denominations first with the remainder converted into smaller denominations. ______
-
-
-
+ * To run the program, the user should type 
+ * <p><code>> java -jar Program1.jar </code></p>
+ * in the command/terminal window.
+ * 
+ * <h2>System Requirements</h2>
+ * The system may be Windows XP or later, MacOS X 10.6 (Snow Leopard) or later 
+ * or a recent Linux distribution. The Java 2 Standard Edition (J2SE) version 6 
+ * or later must be installed on the system, with a minimum of 1GHz CPU, 1GB of 
+ * RAM.
+ * 
+ * <h2>Testing</h2>
+ * See TESTS.md
+ * 
  * @author Steven
  */
 public class Program0 {

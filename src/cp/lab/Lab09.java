@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  * https://github.com/CPSC-SMC/Programming/tree/master/src/cp/term</li>
  * 
  * <li>Create a new project. Copy this code over the Lab09.java file. THE 
- * Lab09.java file is only for instructions.</li>
+ * Lab09.java FILE IS ONLY FOR INSTRUCTIONS.</li>
  * 
  * <li>Add a new JFrame Form... to your project.</li>
  * 

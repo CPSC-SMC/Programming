@@ -12,7 +12,6 @@ import edu.saintmarys.google.Geocoding.Location;
 import edu.saintmarys.wolfram.Pod;
 import edu.saintmarys.wolfram.WolframAlpha;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;

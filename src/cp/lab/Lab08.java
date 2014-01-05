@@ -30,7 +30,7 @@ import java.awt.Graphics;
  * <li>Implement the code that paints your picture. You may want to use the 
  * JPolyDraw applet to help you draw polygons. http://sites.saintmarys.edu/~sbroad/jPolyDraw/</li>
  * 
- * <li>Publish your applet to your Saint Mary’s web page.</li>
+ * <li>Publish your applet to your Saint Mary’s web page.</li><ol type="a">
  * 
  * <li>Publish your site: Visit http://sites.saintmarys.edu/ and follow 
  * instructions to publish your page.</li>
@@ -39,7 +39,7 @@ import java.awt.Graphics;
  * find Lab08. In Lab08, find the build folder. Copy everything in the build 
  * folder into H:\WWW\. )</li>
  * 
- * <li>Now visit http://sites.saintmarys.edu/~<username>/Lab08.html</li>
+ * <li>Now visit http://sites.saintmarys.edu/~<username>/Lab08.html</li></ol>
  * 
  * <li>If the Turkey or Bunny doesn’t show up completely, open notepad and edit 
  * H:\WWW\Lab08.html.  About two thirds of the way down, you’ll see &lt;applet&gt;. 

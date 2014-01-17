@@ -1,18 +1,44 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package cp.term.s14;
 
 /**
- * Practicing with String concatenation, variables, variable expressions, type
- * changes, and returning values from a method.
+ *
  * @author sbroad
  */
 public class Day02 {
-    public static void main(String [] args) {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        int scoops;
+        scoops = 2;
+        System.out.print("I'd like ");
+        System.out.print(scoops);
+        System.out.println(" scoops.");
+        
+        // Change value of sccops.
+        scoops = 1;
+        
+        // String concatenation
+        System.out.println("I'd like " + 
+                scoops + " scoops.");
+        
+        // Arithmetic
+        System.out.println(4+5); // addition
+        System.out.println("4" + "5"); // concatenation
+        System.out.println(4 + "5"); // concatenation
+        
+        // More arithmetic
+        System.out.println(4*5); // multiplication
+        System.out.println(10/5); // division
+        System.out.println(14/5); // int / int ----> int
+        
         
     }
 }

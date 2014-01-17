@@ -5,7 +5,7 @@
 package cp.term.s14;
 
 /**
- *
+ * Practicing printing String literals with System.out.println(...).
  * @author sbroad
  */
 public class Day01 {

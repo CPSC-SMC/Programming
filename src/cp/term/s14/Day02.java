@@ -5,7 +5,7 @@
 package cp.term.s14;
 
 /**
- *
+ * Practicing with variables, data types, concatenation, arithmetic.
  * @author sbroad
  */
 public class Day02 {

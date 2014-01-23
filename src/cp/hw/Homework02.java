@@ -17,7 +17,9 @@ import java.util.Arrays;
  * required information.</p>
  * 
  * <p>Create a project called Homework02. Copy this file over the contents of
- * Homework02.java. The main method does not need to be modified.</p>
+ * Homework02.java. The main method does not need to be modified. Delete each
+ * throw new cp.HomeworkException(); and replace it with the code you need to
+ * accomplish each task.</p>
  * 
  * <p>Submit your project in the usual way. See Lab01 for details.</p>
  * 

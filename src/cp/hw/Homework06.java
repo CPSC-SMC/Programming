@@ -7,7 +7,7 @@
 package cp.hw;
 
 /**
- * <p>Homework 6: Declaring and Creating Arrays</p>
+ * <p>Homework 6: Declaring, Creating and INSERTing with Arrays</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
  * <p>Complete the main method in Homework06 below. Follow the instructions 
@@ -29,11 +29,20 @@ public class Homework06 {
         // Add the Person class to your project from
         // https://raw2.github.com/CPSC-SMC/Programming/201402/src/cp/lib/Person.java
         // It will be a second .java file in your project.
-        // 
         
         // Declare and create space for an array of 100 Person objects.
         
         // Add the Homework06.txt file to your project from
-        // 
+        // https://raw2.github.com/CPSC-SMC/Programming/201402/src/cp/hw/Homework06.txt
+        
+        // Open the Homework06.txt file
+        
+        // Using a while loop, read the data from the file
+        // The file has each person's first names on one line and last name
+        // of the next line.
+        // For each person, create a Person object and INSERT it into the array
+        
+        // print all of the Person objects in the array.
+        
     }
 }

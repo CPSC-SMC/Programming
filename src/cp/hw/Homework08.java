@@ -10,9 +10,8 @@ package cp.hw;
  * <p>Homework 8: Arrays -- Swap, Sort</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
- * <p>Complete each of the methods in Homework08 below. Each method describes what
- * it is supposed to do. Use the <code>return</code> statement to return the
- * required information.</p>
+ * <p>Complete the main method in Homework08 below. Follow the instructions in
+ * the main method below.</p>
  * 
  * <p>Create a project called Homework08. Copy this file over the contents of
  * Homework08.java. The main method does not need to be modified. Remove the lines
@@ -23,5 +22,11 @@ package cp.hw;
  * @author Steven
  */
 public class Homework08 {
+    
+    public static void main(String [] args) {
+        // copy your code from Homework assignments 6 and 7 into main (i.e. here)
+        
+        
+    }
     
 }

@@ -6,7 +6,7 @@
 
 package cp.hw;
 
-import ds.LabException;
+import cp.LabException;
 
 /**
  * <p>Homework 1: Variables, methods, expressions, data conversion</p>
@@ -43,7 +43,7 @@ public class Homework01 {
      * @return a/b, as a <code>double</code>
      */
     public static double divide(int a, int b) {
-        throw new LabException();
+       return (double) a / b;
     }
 
     /**
@@ -97,6 +97,6 @@ public class Homework01 {
         System.out.printf("%.2f inches is %.2f cm\n", 4.0, inchesToCentimeters(4.0));
         System.out.printf("%d * %d = %d", 100, 100, multiply((byte)100,(byte)100));
         System.out.println(birthday(18));
-        
+        promptRespondAcknowledge();
     }
 }

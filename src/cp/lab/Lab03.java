@@ -36,8 +36,8 @@ package cp.lab;
  *      <li> Try entering something that is not a number when prompted for the 
  *      number of days old. What happens?</li></ol>
  * 
- * <li> Submit your program. Upload the project folder to your assignments folder
- * in Google Drive.</li></ol>
+ * <li> Submit your lab program by completing the lab quiz.</li>
+ * </ol>
  * 
  * @author sbroad
  */

@@ -63,21 +63,7 @@ package cp.lab;
  *      will open a web browser window with your Javadoc in it. Find the lab
  *      description and the text that you typed.</li></ol></li>
  * 
- * <li> Prepare your Google Drive. (One time only)<ol>
- *      <li> Login to <a href="https://drive.google.com">drive.google.com</a>.
- *      with your Saint Mary's email and password.</li>
- *      <li> If you have not done so, activate Google drive.</li>
- *      <li> Create a folder that uses your first initial, last 
- *      name and the course number. For example AJones207. Today and in the
- *      future, you will put your project in this folder so I can see it.</li>
- *      <li> Share this folder with me. This will ensure that I can see all of the
- *      work you send to me.</li></ol></li>
- * 
- * <li> Upload your project folder to Google Drive. Use the button that looks
- * like an upward arrow on top of a line.<ol>
- *      <li> Select Folder...</li>
- *      <li> Find My Documents-> NetBeansProjects.</li>
- *      <li> Select the Lab01 folder.</li></ol></li>
+ * <li>Return to BlackBoard. Go to Assignments->Labs and begin the lab quiz.</li>
  * </ol>
  * 
  * @author sbroad

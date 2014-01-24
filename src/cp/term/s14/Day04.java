@@ -42,9 +42,17 @@ public class Day04 {
         // talk about boolean variables
         
         
+        // substring(______)
+        //           start 
+
+        
         // substring(______, _______)
         //           start , end before
         
+        
+        // Initials?
+        String first = "Yvonne";
+        String last = "MacGruder";
         
         // replace(____, ______)
         //         find, replace with
@@ -66,7 +74,13 @@ public class Day04 {
         
         
         // Formatting
-        // System.out.printf
+        // System.out.printf(______,____,...)
+        //                   format,values separated by commas
+        // %s ---> placeholder for String/char
+        // %d ---> placeholder for int/long/byte/short
+        // %f ---> placeholder for float/double
+        // %x.yf ---> specify decimal places for float/double
+        
         
         
         // Date and SimpleDateFormat

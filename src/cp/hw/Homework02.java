@@ -6,7 +6,6 @@
 
 package cp.hw;
 
-import cp.HomeworkException;
 import java.util.Arrays;
 
 /**
@@ -18,7 +17,9 @@ import java.util.Arrays;
  * required information.</p>
  * 
  * <p>Create a project called Homework02. Copy this file over the contents of
- * Homework02.java. The main method does not need to be modified.</p>
+ * Homework02.java. The main method does not need to be modified. Delete each
+ * throw new cp.HomeworkException(); and replace it with the code you need to
+ * accomplish each task.</p>
  * 
  * <p>Submit your project in the usual way. See Lab01 for details.</p>
  * 
@@ -34,7 +35,7 @@ public class Homework02 {
      * @return the upper case initials that go with firstName lastName
      */
     public static String getInitials(String firstName, String lastName) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -46,7 +47,7 @@ public class Homework02 {
      * @return the piglatin translation
      */
     public static String pigLatin(String word) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
     
     /**
@@ -59,7 +60,7 @@ public class Homework02 {
      * @return a nicely formatted address
      */
     public static String mailingAddress(int number, String street, String city, String state) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
     
     /**
@@ -69,7 +70,7 @@ public class Homework02 {
      * @return a number from 1 to 6.
      */
     public static int rollDie() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
     
     /**
@@ -80,28 +81,10 @@ public class Homework02 {
      * @return a string representing the date at the specified number of ticks
      */
     public static String getDate(long ticks) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
     
-    /**
-     * Compute the number of days between two dates. 
-     * 1. You will need a SimpleDateFormat object. 
-     * 2. You will use the <code>SimpleDateFormat.parse</code> method. 
-     * 3. You will convert each string to a <code>Date</code> object. 
-     * 4. You will obtain the number of ticks corresponding to each <code>Date</code>. 
-     * 5. You will compute the difference between these number of ticks. This is 
-     * the number of milliseconds between the two dates.
-     * 6. You will convert the number of milliseconds to a number of days. (Be
-     * careful to convert to <code>double</code> early to avoid rounding.
-     * @param start a date in month day year format
-     * @param end a date in month day year format
-     * @return the (fractional) number of days between start and end
-     */
-    public static double getDaysBetween(String start, String end) {
-        throw new HomeworkException();
-    }
-    
-    /**
+   /**
      * This is a program to test your Homework 2 solutions.
      * @param args command line parameters
      */
@@ -114,8 +97,6 @@ public class Homework02 {
         }
         System.out.printf(Arrays.toString(dice));
         System.out.println(getDate(1000*60*60*24*183));
-        System.out.printf("There are %.2f days between %s and %s.\n",
-                getDaysBetween("05/20/2012", "05/17/2013"), "05/20/2012", "05/17/2013");
     }
     
     

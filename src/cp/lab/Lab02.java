@@ -59,8 +59,7 @@ package cp.lab;
  *      <li> Add javadoc comments for your main method.</li>
  *      <li> Generate your javadoc using Run->Generate javadoc.</li></ol>
  * 
- * <li> Submit your lab program by uploading your Lab02 folder to you assignment
- * folder in Google drive.</li>
+ * <li> Submit your lab program by completing the lab quiz.</li>
 
  * @author sbroad
  */

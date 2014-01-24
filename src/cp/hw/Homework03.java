@@ -6,8 +6,6 @@
 
 package cp.hw;
 
-import cp.HomeworkException;
-
 /**
  * <p>Homework 3: Classes, methods, instances, objects.</p>
  * <p>CPSC 207: Computer Programming</p>
@@ -83,7 +81,7 @@ class Student {
      * @param ID
      */
     public Student(String name, long ID) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -91,7 +89,7 @@ class Student {
      * @return
      */
     public String getName() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -99,7 +97,7 @@ class Student {
      * @return
      */
     public long getID() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -107,7 +105,7 @@ class Student {
      * @return
      */
     public int getCredits() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -115,7 +113,7 @@ class Student {
      * @return
      */
     public double getQualityPoints() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -123,7 +121,7 @@ class Student {
      * @return
      */
     public double gpa() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -132,7 +130,7 @@ class Student {
      * @param grade
      */
     public void addCourse(int credits, double grade) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -141,6 +139,6 @@ class Student {
      */
     @Override
     public String toString() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 }

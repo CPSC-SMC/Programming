@@ -12,9 +12,8 @@ import java.util.Random;
  * <p>Homework 5: Flow control continued: Loops, Switches</p>
  * <p>CPSC 207: Computer Programming</p>
  * 
- * <p>Complete each of the methods in Homework05 below. Each method describes what
- * it is supposed to do. Use the <code>return</code> statement to return the
- * required information.</p>
+ * <p>Complete the main method in Homework05 below. Follow the instructions
+ * above the main method to implement a program using the RandomStudent class.</p>
  * 
  * <p>Create a project called Homework05. Copy this file over the contents of
  * Homework05.java. The main method does not need to be modified. Remove the lines
@@ -102,14 +101,19 @@ public class Homework05 {
         // TODO Print all of the possible majors. Use a "for-each" loop 
         // with the list Major.values()
         
-        // TODO Create 20 RandomStudent objects. Use a while or for loop. For each 
-        // one of them,
+        // TODO Declare and create 20 RandomStudent objects. Use a while or for 
+        // loop. For each one of them,
         //      a. Print the random student on a line by itself.
         //      b. If the random student's major is in the same building as yours,
         //         print "It's home." on a line.
         //      c. Print the random student's gpa to 6 decimal places.
         
-        // TODO Create 100 Animal objects. Use a while or for loop. For each of
+        // TODO Add the Animal class to your project from
+        // https://raw2.github.com/CPSC-SMC/Programming/201402/src/cp/lib/Animal.java
+        // It will be in a second .java file in your project.
+
+        // TODO Create 100 Animal objects. 
+        // Use a while or for loop. For each of
         // them, make the animal forage(), then eat() the amount foraged, sleep(8).
         // Then forage() again and drink() the amount foraged and sleep(8).
         // Count how many animals survive. The animal survives if thirst is less

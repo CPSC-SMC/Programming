@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  * obtain information about her address in response.</p>
  * 
  * <ol><li>Review code from class.<br/>
- * https://github.com/CPSC-SMC/Programming/tree/master/src/cp/term</li>
+ * https://github.com/CPSC-SMC/Programming/tree/201402/src/cp/term</li>
  * 
  * <li>Create a new project. Copy this code over the Lab09.java file. THE 
  * Lab09.java FILE IS ONLY FOR INSTRUCTIONS.</li>

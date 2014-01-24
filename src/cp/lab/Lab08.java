@@ -45,7 +45,7 @@ import java.awt.Graphics;
  * H:\WWW\Lab08.html.  About two thirds of the way down, you’ll see &lt;applet&gt;. 
  * Just change the width and height until you can see the whole turkey!</li>
  * 
- * <li>Submit your project. Email the instructor a link to your Turkey or Bunny</li></ol>
+ * <li>Submit your project.</li></ol>
  * 
  * @author sbroad
  */

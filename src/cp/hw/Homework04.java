@@ -6,7 +6,6 @@
 
 package cp.hw;
 
-import cp.HomeworkException;
 
 /**
  * <p>Homework 4: Boolean expressions, conditionals, flow control</p>
@@ -32,7 +31,7 @@ public class Homework04 {
      * @return true if n is bigger than five, false otherwise
      */
     public static boolean isBiggerThanFive(int n) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
     
     /**
@@ -42,7 +41,7 @@ public class Homework04 {
      * @return true if both are the same, false if they are different
      */
     public static boolean bothTrueOrBothFalse(boolean p, boolean q) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
     
     /**
@@ -53,7 +52,7 @@ public class Homework04 {
      * @return true if both are the same, false if they are different
      */
     public static boolean betweenPiAndE(double value) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     
@@ -66,7 +65,7 @@ public class Homework04 {
      * @return one of "too hot", "too cold" or "just right"
      */
     public static String goldilocks(int temperature) {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
 
     /**
@@ -85,7 +84,7 @@ public class Homework04 {
      * @return true if hunger is less than 4 and thirst is less than 2
      */
     public static boolean aliveAtTheEndOfTheDay() {
-        throw new HomeworkException();
+        throw new cp.HomeworkException();
     }
     
     /**

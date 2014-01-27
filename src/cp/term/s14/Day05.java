@@ -40,9 +40,20 @@ public class Day05 {
         // SimpleDateFormat MonthDayYear = new SimpleDateFormat("Mmmm d, yyyy");
         // Date now = new Date();
         
+        // Print
         
-        // 
+        
+        // Parse
        
 
+        // Creating a SimpleZip object
+        // SimpleZip simple = new SimpleZip("46617");
+        
+        
+        // Creating a NationalWeatherService object
+        // NationalWeatherService nws = new NationalWeatherService("46617");
+        
+        
+        
     }
 }

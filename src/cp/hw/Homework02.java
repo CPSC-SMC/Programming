@@ -90,12 +90,12 @@ public class Homework02 {
      */
     public static void main(String [] args) {
         System.out.printf("%s %s (%s)\n", "ronald", "mcdonald", getInitials("Ronald","McDonald"));
-        System.out.printf("%s --> %s", "scram", pigLatin("scram"));
+        System.out.printf("%s --> %s", "scram\n", pigLatin("scram"));
         int [] dice = new int[30];
         for (int i = 0; i < dice.length; i++) {
             dice[i] = rollDie();
         }
-        System.out.printf(Arrays.toString(dice));
+        System.out.printf("You rolled: %s\n", Arrays.toString(dice));
         System.out.println(getDate(1000*60*60*24*183));
     }
     

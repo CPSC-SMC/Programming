@@ -85,31 +85,6 @@ public class Day04 {
         System.out.println(gen.nextInt(10) + 1);
         
         
-        // Math
-        // PI, E
-        
-        
-        // abs, pow, exp, sqrt
-        
-        
-        // Formatting
-        // System.out.printf(______,____,...)
-        //                   format,values separated by commas
-        // %s ---> placeholder for String/char
-        // %d ---> placeholder for int/long/byte/short
-        // %f ---> placeholder for float/double
-        // %x.yf ---> specify decimal places for float/double
-        
-        
-        
-        // Date and SimpleDateFormat
-        // http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Date.html
-        // http://docs.oracle.com/javase/1.4.2/docs/api/java/text/SimpleDateFormat.html
-        // SimpleDateFormat mmddyy = new SimpleDateFormat("MM/dd/yyyy");
-        // SimpleDateFormat MonthDayYear = new SimpleDateFormat("Mmmm d, yyyy");
-        // Date now = new Date();
-        
-        
         
         
         

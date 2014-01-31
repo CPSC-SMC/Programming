@@ -48,9 +48,10 @@ public class Day05 {
         String last = "Broad";
         System.out.printf("%s, %s\n", last, first);
         System.out.printf("%s, %s\n", first, last);
+
         // Date and SimpleDateFormat
-        // http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Date.html
-        // http://docs.oracle.com/javase/1.4.2/docs/api/java/text/SimpleDateFormat.html
+        // http://docs.oracle.com/javase/6/docs/api/java/util/Date.html
+        // http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
         SimpleDateFormat mmddyy = new SimpleDateFormat("MM/dd/yyyy");
         SimpleDateFormat MonthDayYear = new SimpleDateFormat("MMM d, yyyy");
         Date now = new Date();

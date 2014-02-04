@@ -62,13 +62,8 @@ public class Day06 {
         System.out.println(nws.getCurrentTemp());
         NationalWeatherService miami = new NationalWeatherService("33101");
         System.out.println(miami.getCurrentTemp());
-        NationalWeatherService minneapolis = new NationalWeatherService("63601");
+        NationalWeatherService minneapolis = new NationalWeatherService("55401");
         System.out.println(minneapolis.getCurrentTemp());
         
-        Geocoding geo = new Geocoding("1 Michigan Ave., Chicago, IL");
-        String zip = geo.getLocations().get(0).getPostalCode();
-        NationalWeatherService chicago = new NationalWeatherService(zip);
-        System.out.println(chicago.getCurrentTemp());
-        // Create an Account object
     }
 }

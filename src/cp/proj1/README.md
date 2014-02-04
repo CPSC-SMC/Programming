@@ -14,8 +14,8 @@ how to document (http://goo.gl/4zSlM).
 
 Also see the documentation pages:
 
-http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Date.html
-http://docs.oracle.com/javase/1.4.2/docs/api/java/text/SimpleDateFormat.html
+// http://docs.oracle.com/javase/6/docs/api/java/util/Date.html
+// http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 You will also need the SimpleZip web service.
 

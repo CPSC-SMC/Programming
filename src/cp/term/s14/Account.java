@@ -7,7 +7,10 @@
 package cp.term.s14;
 
 /**
- *
+ * This class represents an account. The account has an account number, an
+ * account name, and an account balance. The account should allow for deposits
+ * and withdrawals.
+ * 
  * @author sbroad
  */
 public class Account {
@@ -17,7 +20,7 @@ public class Account {
     // account name
     // account balance
     
-    // constructor
+    // Constructor
     
     // Accessor methods: number, name, balance
     

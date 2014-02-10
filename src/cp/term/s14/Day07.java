@@ -21,8 +21,8 @@ public class Day07 {
         // Instead of importing Account from an existing package,
         // we will define the account class ourselves
         // See Account.java
-        // Account acct = new Account(11111, "Saint Mary's", 234.56);
-        // System.out.println(acct);
+        Account acct = new Account(11111, "Saint Mary's", (float) 234.56);
+        System.out.println(acct);
         
         
         

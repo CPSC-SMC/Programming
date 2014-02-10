@@ -16,20 +16,34 @@ package cp.term.s14;
 public class Account {
 
     // attributes of the class
-    // account number
-    // account name
-    // account balance
+    private long acctNumber; // account number
+    private String acctName; // account name
+    private float balance; // account balance
     
     // Constructor
+    public Account(long Number, String Name, float Balance) {
+        acctNumber = Number;
+        acctName = Name;
+        balance = Balance;
+    }
     
     // Accessor methods: number, name, balance
+    public long getAccountNumber() {
+        return acctNumber;
+    }
+    
     
     // Mutator methods: setName, deposit, withdraw
+    public float withdraw(float amount) {
+        balance = balance - amount;
+        return balance;
+    }
+    
     
     // toString method
     @Override
     public String toString() {
-        return "";
+        return String.format("%d: %s Balance: $%.2f", acctNumber, acctName, balance);
     }
     
 }

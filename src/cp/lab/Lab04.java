@@ -50,14 +50,7 @@ package cp.lab;
  *      <li> Try several valid inputs. Are the results good?</li>
  *      <li> Try entering bad zip codes. What happens?</li></ol>
  * 
- * <li> Select Tools->Analyze javadoc from the menu. The results will appear in 
- * the general area of the Java console. </li><ol>
- *      <li> Select the top checkbox and click the "Fix Selected" button that 
- *      appears below. </li>
- *      <li> Fill in the empty javadoc comment areas in Lab04.java and Weather.java.</li>
- *      <li> after each @param, explain what the method parameter does.</li></ol>
- * 
- * <li> Submit your lab project in the usual way.</li></ol>
+ *  <li> Submit your lab project in the usual way.</li></ol>
  * 
  * @author sbroad
  */
@@ -70,4 +63,34 @@ public class Lab04 {
     public static void main (String [] args) {
         
     }
+    
+}
+
+// Since it isn't a public class, we can only use it in the package cp.lab.
+// Fortunately that is where we are.
+class Weather {
+    
+    // declare class attributes
+    // first look at the documentation to see what is available
+    // http://sites.saintmarys.edu/~sbroad/javadoc/edu/saintmarys/NationalWeatherService.html
+    
+    
+    // constructor
+    
+    
+    
+    // accessor methods
+    
+    
+    
+    // no mutator methods needed
+    
+    
+    
+    // toString method
+    @Override
+    public String toString() {
+        return String.format("");
+    }
+    
 }

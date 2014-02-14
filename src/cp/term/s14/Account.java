@@ -18,10 +18,10 @@ public class Account {
     // attributes of the class
     private long acctNumber; // account number
     private String acctName; // account name
-    private float balance; // account balance
+    private double balance; // account balance
     
     // Constructor
-    public Account(long Number, String Name, float Balance) {
+    public Account(long Number, String Name, double Balance) {
         acctNumber = Number;
         acctName = Name;
         balance = Balance;
@@ -34,7 +34,7 @@ public class Account {
     
     
     // Mutator methods: setName, deposit, withdraw
-    public float withdraw(float amount) {
+    public double withdraw(double amount) {
         balance = balance - amount;
         return balance;
     }

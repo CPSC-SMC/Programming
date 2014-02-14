@@ -74,6 +74,10 @@ public class Homework03 {
 class Student {
 
     // TODO: declare appropriate attributes i.e., instance variables
+    private String n;
+    private long i;
+    private int c;
+    private double qp;
     
     /**
      *
@@ -81,7 +85,10 @@ class Student {
      * @param ID
      */
     public Student(String name, long ID) {
-        throw new cp.HomeworkException();
+        n = name;
+        i = ID;
+        c = 0;
+        qp = 0;
     }
 
     /**
@@ -121,7 +128,7 @@ class Student {
      * @return
      */
     public double gpa() {
-        throw new cp.HomeworkException();
+        return qp / c;
     }
 
     /**
@@ -130,7 +137,9 @@ class Student {
      * @param grade
      */
     public void addCourse(int credits, double grade) {
-        throw new cp.HomeworkException();
+        // c = c + credits;
+        c += credits;
+        qp += credits * grade;
     }
 
     /**

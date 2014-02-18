@@ -60,11 +60,9 @@ public class Day09 {
         //  do what is in the {}
         // }
         String answer = "no";
-        boolean keepGoing = answer.equalsIgnoreCase("no");
-        while(keepGoing) {
+        while(answer.equalsIgnoreCase("no")) {
             System.out.print("Are we there yet? ");
             answer = scan.nextLine();
-            keepGoing = answer.equalsIgnoreCase("no");
         }
         
         int count = 0;

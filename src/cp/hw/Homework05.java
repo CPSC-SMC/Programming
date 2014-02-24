@@ -61,8 +61,7 @@ public class Homework05 {
  * A list of majors. Feel free to add yours to the list if it is not already
  * there.
  */
-enum Major {Bio, Chem, Business, Math, Psych, Soc, English, 
-       Art, Nursing}
+enum Major {Bio, Chem, Business, Math, Psych, Soc, English, Art, Nursing}
 
 /**
  * A random student. The random student has a randomly assigned major and

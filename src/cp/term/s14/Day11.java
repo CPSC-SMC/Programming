@@ -8,8 +8,14 @@ package cp.term.s14;
 
 import edu.saintmarys.SimpleZip;
 
-enum MyEnum {One, Two, Three, Four}
-
+enum MyEnum {One, Three, Two, Four}
+enum IceCreamFlavor {
+    Chocolate, 
+    CookieDough, 
+    Vanilla, 
+    Strawberry, 
+    Superman 
+}
 /**
  *
  * @author Steven
@@ -19,7 +25,7 @@ public class Day11 {
     public static void main(String [] args) {
         
         // Enumeration
-        MyEnum val = MyEnum.One;
+        MyEnum val = MyEnum.Three;
         System.out.println(val);
         
         // Switching with enums
@@ -41,18 +47,34 @@ public class Day11 {
         }
         
         
-        // Declare an enumeration for Residence Halls at Saint Mary's
+        // Declare an enumeration for IceCreamFlavors
         // Print all of the halls using a for-each loop
+        for (IceCreamFlavor e : IceCreamFlavor.values()) {
+            System.out.println(e);
+        }
         
+        System.out.println("");
+        String userInput = "Vanilla";
+        IceCreamFlavor flav = IceCreamFlavor.valueOf(userInput);
+        System.out.println(flav);
         // Print messages for each of the halls using a switch statement
         
-        
+        switch (flav) {
+            case Chocolate:
+                System.out.println("we're all out");
+                break;
+            case CookieDough:
+                System.out.println("It's on sale");
+                break;
+            default:
+                System.out.println("Thanks for your order");
+        }
         
         // Arrays. Store a list of items of the same type/class.
         // Declare an array
-        //int [] myInts;
-        //double [] myDoubles;
-        //SimpleZip [] simples = new SimpleZip[10];
+        int [] myInts;
+        double [] myDoubles;
+        SimpleZip [] simples = new SimpleZip[10];
         // Allocate space in the array using new
         // Declare and initialize
         //String [] zips = {"10101","20202","30303","46556","90210"};

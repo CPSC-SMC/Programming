@@ -50,22 +50,9 @@ public class Homework05 {
         // Then forage() again and drink(1), sleep(8).
         // Count how many animals survive. The animal survives if thirst is less
         // than 2 and hunger is less than 4. Print a message to the console 
-        // indicating how many animals survived.
-        int lived = 0;
-        for (int i = 0; i < 100; i++) {
-            Animal a = new Animal("Brittany");
-            int food = a.forage();
-            a.eat(food);
-            a.sleep(8);
-            int water = a.forage();
-            a.drink(water);
-            a.sleep(8);
-            if (a.getHunger() < 4 && a.getThirst() < 2) {
-                lived ++;
-            }
-        }
-        System.out.printf("Of 100 animals, only %d survived.\n", lived);
-
+        // indicating how many animals survived. (Hint: before the loop, you
+        // might want to declare a variable to count up how many animals live.
+       
     }
     
 }

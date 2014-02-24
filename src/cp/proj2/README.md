@@ -22,6 +22,6 @@ Here are some hints:
 3. You might want to use your Weather class from Lab 4.
 
 Please see the Design Template available at
-<a target = "_" href="https://github.com/CPSC-SMC/Programming/tree/201402/src/cp/design">
+<a target = "_blank" href="https://github.com/CPSC-SMC/Programming/tree/201402/src/cp/design">
 https://github.com/CPSC-SMC/Programming/tree/201402/src/cp/design
 </a>. This will help you write your documentation and testing plan.

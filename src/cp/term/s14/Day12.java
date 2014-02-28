@@ -25,27 +25,50 @@ public class Day12 {
         
         // Allocate space in the array using new
         // Declare and initialize
-        // String [] zips = {"10101","20202","30303","46556","90210"};
+        String [] zips = {"10101","20202","30303","46556","90210"};
+        System.out.println(zips.length);
         
         
         // Declare and create
-        // SimpleZip [] simples = new SimpleZip[10];
+        SimpleZip [] simples = new SimpleZip[10];
         
         // Access an item in an array
-        // System.out.println(zips[2]);
+        System.out.println(zips[2]);
         
         // Change an item in an array
-        // zips[3] = "46601";
+        //zips[3] = "46601";
 
         // Loop through an array for / for-each
-
+        for (String zip : zips) {
+            System.out.println(zip);
+        }
         
-        // When we create an array, it only saves space for a certain number of
-        // objects. We still have to put them into the array.
-
+        // When we create an array, it only saves 
+        // space for a certain number of
+        // objects. We still have to put them 
+        // into the array.
         
+        for (SimpleZip simple : simples) {
+            System.out.println(simple);
+        }
+        
+        int index;  // position we are currently looking at
+        int count = 0; // number of positions filled
+                        // in the array
+
         // INSERT: adding an item to an array
         //      add each zip code to the simplezip array
+        simples[count] = new SimpleZip("10101");
+        count ++;
+        
+        simples[count] = new SimpleZip("46556");
+        count++;
+        
+        System.out.println("Below are the filled in positions");
+        for (index = 0; index < count; index++) {
+            System.out.println(simples[index]);
+        }
+        
 
         
         // INSERT: start over... ask user to enter

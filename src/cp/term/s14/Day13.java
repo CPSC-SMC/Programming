@@ -7,6 +7,7 @@
 package cp.term.s14;
 
 import edu.saintmarys.SimpleZip;
+import java.util.Scanner;
 
 /**
  *
@@ -28,8 +29,25 @@ public class Day13 {
 
         // INSERT: adding an item to an array
         //      add each zip code to the simplezip array
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What zip code do you want to add?");
+        String zip = scan.nextLine();
         
-        
+        while(zip.length() == 5) {
+            // Create a SimpleZip object
+            SimpleZip simple = new SimpleZip(zip);
+            
+            // 1. modify the array
+            simples[count] = simple;
+            
+            // 2. increase count by 1
+            count++;
+            
+            // ask user for next zip code
+            System.out.println("What zip code do you want to add?");
+            zip = scan.nextLine();
+
+        }
         
         // Print the zip code
         System.out.println("Below are the filled in positions");
@@ -39,7 +57,23 @@ public class Day13 {
         
         
         // FIND: Search for an item in an array
-
+        System.out.println("What zip code do you want to find?");
+        String code = scan.nextLine();
+        for (index = 0; index < count; index++) {
+            // check for a match
+            if (code.equalsIgnoreCase(simples[index].getZip())) {
+                // we found  match ... leave loop
+                break;
+            }
+        }
+        
+        if (index < count) { //we found it !!!
+            System.out.println("We found " + simples[index]);
+        }
+        else
+        {
+            System.out.println("Not found");
+        }
         
         // Loop until you find a match or run out of items
 

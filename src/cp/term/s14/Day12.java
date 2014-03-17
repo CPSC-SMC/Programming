@@ -10,8 +10,60 @@ import edu.saintmarys.SimpleZip;
 import java.util.Scanner;
 
 /**
- *
- * @author sbroad
+ * <h1>Program 0: Counting pennies</h1>
+ * 
+ * <h2>Program Description</h2>
+ * Many of us have large collections of pennies in various containers in our 
+ * homes.  If we could turn these into dollars, quarters, dimes, etc., the money 
+ * would be more usable.  This program allows a user to enter (from the 
+ * keyboard) the number of pennies in her favorite container.  It then computes 
+ * and prints the number of dollars, quarters, dimes, nickels, and pennies that 
+ * it should changed into that totals the same amount.
+ * 
+ * <h2>User Requirements</h2>
+ * <ol type="A">
+ * <li>The user must be able to enter a number of pennies in the console.</li>
+ * <li>The user must be prompted to enter the number of pennies with a clear
+ * label.</li>
+ * <li>Once the user enters the number of pennies, the program must print the 
+ * appropriate number of dollars, quarters, dimes, nickels and pennies in that 
+ * order.</li>
+ * <li>The results must be printed one denomination per line (i.e. one line 
+ * labeled "Dollars", one line labeled "Quarters", etc.).</li>
+ * <li>The pennies should be converted into the largest denominations first with 
+ * the remainder converted into smaller denominations (i.e. 125 pennies is 1 
+ * dollar and 1 quarter, not 0 dollars and 5 quarters).</li>
+ * </ol>
+ * 
+ * <h2>Design – Imports</h2>
+ * This program uses the java.util.Scanner class.
+ * 
+ * <h2>User Documentation</h2>
+ * Open the command window in Windows or the terminal window in MacOS X/Linux. 
+ * Navigate to the directory or folder where the compiled java program is stored 
+ * using the cd command. (For example, 
+ * <p><code>> H:<br/>> cd My Documents/Program1/dist</code></p>
+ * 
+ * To run the program, the user should type 
+ * <p><code>> java -jar Program1.jar </code></p>
+ * in the command/terminal window.
+ * 
+ * <h2>User Instructions</h2>
+ * The program will prompt the user to enter a number of pennies. The user should
+ * enter a whole number of pennies. The program will then produce a report
+ * indicating the number of dollars, quarters, dimes, nickels and remaining
+ * pennies into which the initial number of pennies can be exchanged.
+ * 
+ * <h2>System Requirements</h2>
+ * The system may be Windows XP or later, MacOS X 10.6 (Snow Leopard) or later 
+ * or a recent Linux distribution. The Java 2 Standard Edition (J2SE) version 6 
+ * or later must be installed on the system, with a minimum of 1GHz CPU, 1GB of 
+ * RAM.
+ * 
+ * <h2>Testing</h2>
+ * See TESTS.txt
+ * 
+ * @author Steven
  */
 public class Day12 {
     public static void main(String [] args) {

@@ -58,7 +58,7 @@ class SortableSimpleZip extends SimpleZip implements Comparable<SimpleZip> {
 
     @Override
     public int compareTo(SimpleZip o) {
-        return this.getZip().compareTo(o.getZip());
+        return -this.getCity().compareTo(o.getCity());
         //throw new UnsupportedOperationException("Not yet implemented");
     }
     

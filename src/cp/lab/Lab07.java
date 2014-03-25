@@ -15,7 +15,7 @@ package cp.lab;
  * performing some operation on the previous member(s) of the sequence. For 
  * example, 
  * 
- * a(n)=2*a(n)-1
+ * a(n)=2*a(n-1)
  * 
  * The next value is 2 times the current value. The problem is that one must 
  * eventually know one value of the sequence in order to know any of them. For 

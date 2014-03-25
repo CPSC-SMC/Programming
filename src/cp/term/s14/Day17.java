@@ -6,7 +6,6 @@
 
 package cp.term.s14;
 
-import cp.lib.Animal;
 
 /**
  *
@@ -14,53 +13,65 @@ import cp.lib.Animal;
  */
 public class Day17 {
     public static void main(String [] args) {
-        Animal a;
         
-        // Create a lion
-        a = new Lion();
-        System.out.println(a);
+        // Create a fruit
+        Fruit f = new Fruit("Apple", "", 1.29, 3);
+        System.out.println(f);
         
-        // Create a dog
-        a = new Dog();
-        System.out.println(a);
+        f.eat(0.5);
+        System.out.printf("sold some for %.2f\n", f.sell(0.5));
         
-        // Create a Hound
-        a = new HoundDog();
-        System.out.println(a);
+        System.out.println(f);
+        
+        
     }
 }
 
-class Lion extends Animal {
+class Fruit {
+    
+    // encapsulation = hiding data + publishing methods
+    protected String name; 
+    protected String variety;
+    protected double price;
+    protected double weight;
 
-    public Lion(int hunger, int thirst, double energy) {
-        super("Leo", hunger, thirst, energy);
+    public Fruit(String name, String variety, double price, double weight) {
+        this.name = name;
+        this.variety = variety;
+        this.price = price;
+        this.weight = weight;
     }
 
-    public Lion() {
-        this(0,0,1);
+    public String getName() {
+        return name;
+    }
+
+    public String getVariety() {
+        return variety;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public String eat(double amt) {
+        weight -= amt;
+        return "";
     }
     
-    public String toString () {
-        return "I'm a lion! Roooaar! " + super.toString();
-    }
-}
-
-class Dog extends Animal {
-    public Dog(int hunger, int thirst, double energy) {
-        super("Bowzer", hunger, thirst, energy);
+    public double sell(double amt) {
+        weight -= amt;
+        return amt * price;
     }
     
-    public Dog() {
-        this(0,0,1);
-    }
-    
+    @Override
     public String toString() {
-        return "I'm a dog! Woof! " + super.toString();
+        return String.format("%s %s, %.1f lbs at $%.2f per lb", variety, name, weight, price);
     }
+    
 }
 
-class HoundDog extends Dog {
-    public String toString() {
-        return "Howl! " + super.toString();
-    }
-}

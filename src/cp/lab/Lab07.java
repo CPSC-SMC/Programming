@@ -77,7 +77,7 @@ package cp.lab;
  * 
  * Before checking to see if the word is a palindrome, make the word lowercase. 
  * Also, replace anything that is not a letter of the alphabet with the empty 
- * string. You can do this by using the .replaceAll(“[^A-Za-z]”, “”) on the string.
+ * string. You can do this by using the .replaceAll("[^A-Za-z]", "") on the string.
  * Try using a few of these strings: http://www.palindromelist.net/ You’ll notice 
  * that sentences can be palindromes. Since the previous step removes spaces, 
  * punctuation and changes all letters to lowercase, we can identify these 
@@ -87,11 +87,40 @@ package cp.lab;
  */
 public class Lab07 {
 
+    // Copy doubling method here
+    
+    
+    
+    // Factorial method
+    public static int factorial(int n) {
+        // implement this!!! think back to class...
+        throw new cp.LabException();
+    }
+    
+    
+    public static boolean palindrome(String word) {
+        //implement this!!! read the instructions above
+        throw new cp.LabException();
+    }
+    
     /**
      *
      * @param args
      */
     public static void main (String [] args) {
+        // Try printing some results from doubling method, for example doubling(6), doubling(20)
+        
+        
+        // Try printing some factorial results, for example 4!, 7!, 14!
+        // check them against wolframalpha.com
+        
+        
+        // Ask the user to enter a word or phrase
+        // clean up the word to make it a 
+        // test to see if it is a palindrome
+        
+        
+        
         
     }
 }

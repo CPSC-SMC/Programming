@@ -6,7 +6,10 @@
 
 package cp.lab;
 
+import java.awt.Dimension;
 import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  * <p>Lab 8: Drawing in Java</p>
@@ -23,7 +26,7 @@ import java.awt.Graphics;
  * 
  * <li>Create a new project. Copy this file over the text in Lab08.java.</li>
  * 
- * <li>Make sure that the class Lab08 extends JApplet. (Why?)</li>
+ * <li>Make sure that the class Lab08 extends JPanel. (Why?)</li>
  * 
  * <li>Declare a public void paint(Graphics page) method in the Lab8 class.</li>
  * 
@@ -49,14 +52,29 @@ import java.awt.Graphics;
  * 
  * @author sbroad
  */
-public class Lab08 {
+public class Lab08 extends JPanel {
     
+    public Lab08() {
+        this.setPreferredSize(new Dimension(400,400));
+    }
     /**
      * This method is an override for the <code>paint</code> method in the JApplet
      * class. Implement this method to draw your turkey or bunny.
      * @param page the graphics object for this applet
      */
+    @Override
     public void paint(Graphics page) {
+        page.drawRect(100, 100, 200, 200);
+    }
+    
+    public static void main(String [] args) {
+        JFrame frame = new JFrame("");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        frame.setContentPane(new Lab08());
+        
+        frame.pack();
+        frame.setVisible(true);
         
     }
     

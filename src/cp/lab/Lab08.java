@@ -6,8 +6,12 @@
 
 package cp.lab;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -64,7 +68,28 @@ public class Lab08 extends JPanel {
      */
     @Override
     public void paint(Graphics page) {
+        
+        Graphics2D g = (Graphics2D) page;
+        g.setStroke(new BasicStroke(10));
+        
+        page.setColor(new Color(173,255,47));
+        page.fillRect(0, 0, 400, 400);
+        
+        page.setColor(Color.PINK);
         page.drawRect(100, 100, 200, 200);
+        
+        g.setStroke(new BasicStroke(3));
+        page.setColor(Color.blue);
+        page.drawRect(150, 150, 100, 100);
+        
+        int [] x = {100, 200, 150};
+        int [] y = {100, 100, 150};
+        page.drawPolygon(x, y, 3);
+        
+        page.drawArc(155, 140, 100, 100, 250, 40);
+        
+        page.setFont(new Font("Cambria", Font.ITALIC, 48));
+        page.drawString("Hello world!", 10, 350);
     }
     
     public static void main(String [] args) {

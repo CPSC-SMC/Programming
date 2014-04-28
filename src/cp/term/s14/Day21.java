@@ -9,8 +9,11 @@ package cp.term.s14;
 import edu.saintmarys.wolfram.Pod;
 import edu.saintmarys.wolfram.WolframAlpha;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
@@ -40,6 +43,7 @@ public class Day21 extends javax.swing.JFrame {
         SearchField = new javax.swing.JTextField();
         OKButton = new javax.swing.JButton();
         PodLabel = new javax.swing.JLabel();
+        PodCombo = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,6 +66,12 @@ public class Day21 extends javax.swing.JFrame {
         PodLabel.setText("Pod Title & ID");
         PodLabel.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        PodCombo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                PodComboItemStateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,6 +79,7 @@ public class Day21 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PodCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PodLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -87,7 +98,9 @@ public class Day21 extends javax.swing.JFrame {
                     .addComponent(SearchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(OKButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PodLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                .addComponent(PodCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PodLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -95,15 +108,32 @@ public class Day21 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void OKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKButtonActionPerformed
+        
+        // Clear out the pods that are in the combo
+        PodCombo.removeAllItems();
+        
         try {
-            WolframAlpha wolf = new WolframAlpha(SearchField.getText());
-            Pod p = wolf.getPrimaryPod();
             
-            PodLabel.setText(p.toString());
-            PodLabel.setIcon(p.getIcon());
+            // Create a new WolframAlpha search (using the class attribute wolf
+            // which is declared at the bottom).
+            wolf = new WolframAlpha(SearchField.getText());
+            
+            if (wolf.isSuccess()) {
+                PodCombo.addItem("Select a result:");
+            }
+            else {
+                PodCombo.addItem("Search unsuccessful. Try again.");
+            }
+                
+            // Add all of the Pod ID's to the combo
+            for (Pod p : wolf.getPods()) {
+                PodCombo.addItem(p.getID());
+            }
+
         }
         catch (Exception ex) {
-            PodLabel.setText(ex.toString());
+            PodCombo.addItem(ex);
+            PodLabel.setText(ex.getMessage());
             PodLabel.setIcon(null);
         }
     }//GEN-LAST:event_OKButtonActionPerformed
@@ -111,6 +141,33 @@ public class Day21 extends javax.swing.JFrame {
     private void SearchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchFieldActionPerformed
         OKButtonActionPerformed(evt);
     }//GEN-LAST:event_SearchFieldActionPerformed
+
+    private void PodComboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_PodComboItemStateChanged
+        
+        // The first pod is just a placeholder: either an error or a prompt
+        // If it is selected, don't do anything
+        if (PodCombo.getSelectedIndex() <= 0) return;
+        
+        try {
+            // The pod has a link to the image
+            // First get the selected pod
+            String id = PodCombo.getSelectedItem().toString();
+            Pod p = wolf.getPod(id);
+            
+            // Then build a url and icon
+            URL urlImage = new URL(p.getImageLink());
+            ImageIcon img = new ImageIcon(urlImage);
+            
+            // Last, put the image into the PodLabel
+            PodLabel.setIcon(img);
+            
+            // blank out the text
+            PodLabel.setText("");
+        } catch (MalformedURLException ex) {
+            PodLabel.setText(ex.getMessage());
+            PodLabel.setIcon(null);
+        }
+    }//GEN-LAST:event_PodComboItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -149,8 +206,11 @@ public class Day21 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton OKButton;
+    private javax.swing.JComboBox PodCombo;
     private javax.swing.JLabel PodLabel;
     private javax.swing.JTextField SearchField;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    private WolframAlpha wolf; // make the wolframalpha search available to all methods
 }

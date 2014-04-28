@@ -32,7 +32,7 @@
               <Component id="CatButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="DogButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="377" max="32767" attributes="0"/>
           </Group>
           <Component id="ImageLabel" alignment="0" max="32767" attributes="0"/>
       </Group>
@@ -46,7 +46,7 @@
                   <Component id="DogButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="ImageLabel" max="32767" attributes="0"/>
+              <Component id="ImageLabel" pref="321" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
